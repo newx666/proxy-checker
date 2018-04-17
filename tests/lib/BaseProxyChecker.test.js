@@ -40,7 +40,6 @@ describe('lib/BaseProxyChecker', function() {
   });
 
   it('socketRead', async function() {
-    this.timeout(5000);
     let bpc = new BaseProxyChecker(debugServerHost, debugServerPort);
     await bpc.socketConnect();
     await bpc.socketWrite(requestData);

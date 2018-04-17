@@ -1,11 +1,16 @@
 'use strict';
+const BaseProxyChecker = require('./lib/BaseProxyChecker');
+const ConnectProxyChecker = require('./lib/ConnectProxyChecker');
+const HttpProxyChecker = require('./lib/HttpProxyChecker');
+const Socks4ProxyChecker = require('./lib/Socks4ProxyChecker');
+const Socks5ProxyChecker = require('./lib/Socks5ProxyChecker');
+const ProxyChecker = require('./lib/ProxyChecker');
 
-const checkHttpProxy = require('./lib/checkHttpProxy');
-const checkConnectProxy = require('./lib/checkConnectProxy');
-const checkSocks4Proxy = require('./lib/checkSocks4Proxy');
-
-(async () => {
-  // console.log(await checkConnectProxy('61.91.235.226', 8080));
-  // console.log(await checkHttpProxy('61.91.235.226', 8080));
-  console.log(await checkSocks4Proxy('61.91.235.226', 8080));
-})();
+module.exports = {
+  BaseProxyChecker,
+  ConnectProxyChecker,
+  HttpProxyChecker,
+  Socks4ProxyChecker,
+  Socks5ProxyChecker,
+  ProxyChecker,
+};

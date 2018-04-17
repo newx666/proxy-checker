@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-  requestCheckerUrl: 'http://request-debug.newx.online',// Сервер для проыверки запросов от прокси
+  requestCheckerUrl: 'http://ipinfo.io/ip',// Сервер для проыверки запросов от прокси
   proxies: {
     http: {
       host: '127.0.0.1',
